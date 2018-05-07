@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-Rt-lcf" customClass="ZXRegTextField">
+                                <rect key="frame" x="50" y="80" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfQ-Jc-feu" customClass="ZXRegTextField">
+                                <rect key="frame" x="50" y="140" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="canCopyPaste" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alpahbet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-ay-egi" customClass="ZXRegTextField">
+                                <rect key="frame" x="50" y="200" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="chars" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qSF-A6-2S3" customClass="ZXRegTextField">
+                                <rect key="frame" x="50" y="260" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReN-va-JQr">
+                                <rect key="frame" x="50" y="171" width="275" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="72P-Qt-MzM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ReN-va-JQr" firstAttribute="top" secondItem="VfQ-Jc-feu" secondAttribute="bottom" constant="1" id="2Ys-p9-qG1"/>
+                            <constraint firstItem="qSF-A6-2S3" firstAttribute="top" secondItem="ayd-ay-egi" secondAttribute="bottom" constant="30" id="5so-k1-hgI"/>
+                            <constraint firstItem="ayd-ay-egi" firstAttribute="centerX" secondItem="VfQ-Jc-feu" secondAttribute="centerX" id="HtR-LI-DIE"/>
+                            <constraint firstItem="ayd-ay-egi" firstAttribute="top" secondItem="VfQ-Jc-feu" secondAttribute="bottom" constant="30" id="KKA-3V-EsC"/>
+                            <constraint firstItem="ayd-ay-egi" firstAttribute="width" secondItem="VfQ-Jc-feu" secondAttribute="width" id="Kwd-ZD-xVX"/>
+                            <constraint firstItem="qSF-A6-2S3" firstAttribute="centerX" secondItem="ayd-ay-egi" secondAttribute="centerX" id="LmL-1o-l1H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wbS-Rt-lcf" secondAttribute="trailing" constant="50" id="S81-7a-0RB"/>
+                            <constraint firstItem="qSF-A6-2S3" firstAttribute="width" secondItem="ayd-ay-egi" secondAttribute="width" id="SD6-Da-pw3"/>
+                            <constraint firstItem="VfQ-Jc-feu" firstAttribute="centerX" secondItem="wbS-Rt-lcf" secondAttribute="centerX" id="bRX-Bi-wUl"/>
+                            <constraint firstItem="wbS-Rt-lcf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bax-kp-475"/>
+                            <constraint firstItem="VfQ-Jc-feu" firstAttribute="top" secondItem="wbS-Rt-lcf" secondAttribute="bottom" constant="30" id="f2o-Ye-82G"/>
+                            <constraint firstItem="VfQ-Jc-feu" firstAttribute="width" secondItem="wbS-Rt-lcf" secondAttribute="width" id="qnb-in-bsy"/>
+                            <constraint firstItem="ReN-va-JQr" firstAttribute="width" secondItem="VfQ-Jc-feu" secondAttribute="width" id="rxN-SO-VXb"/>
+                            <constraint firstItem="ReN-va-JQr" firstAttribute="centerX" secondItem="VfQ-Jc-feu" secondAttribute="centerX" id="x3s-F4-43P"/>
+                            <constraint firstItem="wbS-Rt-lcf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="xON-wE-kxj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tagView" destination="ReN-va-JQr" id="DMZ-uO-Qiy"/>
+                        <outlet property="txtAlphabet" destination="ayd-ay-egi" id="61e-9U-Tlk"/>
+                        <outlet property="txtChars" destination="qSF-A6-2S3" id="OLn-DX-27v"/>
+                        <outlet property="txtMobile" destination="wbS-Rt-lcf" id="U9G-SA-qZL"/>
+                        <outlet property="txtNumber" destination="VfQ-Jc-feu" id="fHd-D6-jVL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
